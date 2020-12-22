@@ -1,0 +1,19 @@
+<h2>投稿一覧</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+<% @lists.each do |list| %>
+  <tbody>
+    <tr>
+      <td><%= list.title %></td>
+      <td><%= list.body %></td>
+      <td><%= link_to "詳細画面へ", todolist_path(list) %></td>
+    </tr>
+  </tbody>
+<% end %>
+</table>
