@@ -13,6 +13,7 @@
       <td><%= @list.body %></td>
       <td><%= link_to '編集', edit_todolist_path(@list) %></td>
       <td><%= link_to '削除', destroy_todolist_path(@list), method: :delete, "data-confirm" => "本当に削除しますか？" %></td>
+      <td><%= link_to '戻る', todolists_path %></td>
     </tr>
   </tbody>
 </table>
