@@ -11,7 +11,7 @@
   <tbody>
     <tr>
       <td><%= list.title %></td>
-      <td><%= attachment_image_tag list, :image, :fill, 100, 100, format: 'jpeg', %></td>
+      <td><%= attachment_image_tag list, :image, :fill, 100, 100, format: 'jpeg' %></td>
       <td><%= list.body %></td>
       <td><%= link_to "詳細画面へ", todolist_path(list) %></td>
     </tr>

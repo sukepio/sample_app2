@@ -12,6 +12,7 @@
       <td><%= attachment_image_tag @list, :image, :fill, 100, 100, format: 'jpeg' %></td>
       <td><%= @list.body %></td>
       <td><%= link_to '編集', edit_todolist_path(@list) %></td>
+      <td><%= link_to '削除', destroy_todolist_path(@list), method: :delete, "data-confirm" => "本当に削除しますか？" %></td>
     </tr>
   </tbody>
 </table>
