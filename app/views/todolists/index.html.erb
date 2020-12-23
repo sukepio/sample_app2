@@ -1,20 +1,11 @@
-<h2>投稿一覧</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-    </tr>
-  </thead>
+<div class="list-wrap">
 <% @lists.each do |list| %>
-  <tbody>
-    <tr>
-      <td><%= list.title %></td>
-      <td><%= attachment_image_tag list, :image, :fill, 100, 100, format: 'jpeg' %></td>
-      <td><%= list.body %></td>
-      <td><%= link_to "詳細画面へ", todolist_path(list) %></td>
-    </tr>
-  </tbody>
+  <div class="list-box">
+    <%= attachment_image_tag list, :image, :fill, 200, 200, format: 'jpeg' %>
+    <div class="list-comment">
+      <span class="list-body"><%= list.body %></span>
+      <span class="list-title"><%= list.title %></span>
+    </div>
+  </div>
 <% end %>
-</table>
+</div>
